@@ -1,0 +1,38 @@
+{
+ "gpqa_diamond": {
+  "posed_as": "healthbench",
+  "rows": 128,
+  "sha256": "3f5cc722277ce713bcbf2535780238d5741460173c4d1f8891dc04b0bfe3284a",
+  "training_overlap": null
+ },
+ "math_hard": {
+  "posed_as": "aime-2026",
+  "rows": 128,
+  "sha256": "46915c9ddf4da1a364ca3c8818ccb25b47b31b1f7fc4d24573934a82157e9eb2",
+  "training_overlap": null
+ },
+ "musique": {
+  "posed_as": "hotpotqa",
+  "rows": 128,
+  "sha256": "581b21b881a0fffb3b0e4a1342e0b5443465f5946146002471658bfd149f2bf5",
+  "training_overlap": null
+ },
+ "nq_open": {
+  "posed_as": "triviaqa",
+  "rows": 128,
+  "sha256": "952810fe5367c2304e04468f07d53539aafd5e52182fd69be3ed840aaac3fdef",
+  "training_overlap": null
+ },
+ "swe_bench_verified": {
+  "posed_as": "mbpp-plus",
+  "rows": 128,
+  "sha256": "7cbeae9c7f358f104cea69660a58bc041a7ebb12e4b8a82086e4fce419df55b0",
+  "training_overlap": null
+ },
+ "webshop": {
+  "posed_as": "alfworld",
+  "rows": 128,
+  "sha256": "7e410b6d162d1fa95e330d9e0cecc0b471929e345dd0b8ec7a89e52392ebc2fd",
+  "training_overlap": null
+ }
+}

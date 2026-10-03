@@ -1,0 +1,78 @@
+{
+ "domains": {
+  "aime-2026": {
+   "candidates": 980,
+   "test": 30,
+   "test_overlap_removed": 3,
+   "train_distinct": 512,
+   "train_rows": 512,
+   "unique": 980,
+   "validation": 16,
+   "vq_heldout": 4
+  },
+  "alfworld": {
+   "candidates": 3553,
+   "test": 128,
+   "test_overlap_removed": 0,
+   "train_distinct": 512,
+   "train_rows": 512,
+   "unique": 3553,
+   "validation": 16,
+   "vq_heldout": 4
+  },
+  "healthbench": {
+   "candidates": 5000,
+   "test": 128,
+   "test_overlap_removed": 2,
+   "train_distinct": 512,
+   "train_rows": 512,
+   "unique": 4773,
+   "validation": 16,
+   "vq_heldout": 4
+  },
+  "hotpotqa": {
+   "candidates": 90447,
+   "test": 128,
+   "test_overlap_removed": 0,
+   "train_distinct": 512,
+   "train_rows": 512,
+   "unique": 90434,
+   "validation": 16,
+   "vq_heldout": 4
+  },
+  "mbpp-plus": {
+   "candidates": 378,
+   "test": 128,
+   "test_overlap_removed": 2,
+   "train_distinct": 228,
+   "train_rows": 512,
+   "unique": 250,
+   "validation": 16,
+   "vq_heldout": 4
+  },
+  "triviaqa": {
+   "candidates": 76523,
+   "test": 128,
+   "test_overlap_removed": 1,
+   "train_distinct": 512,
+   "train_rows": 512,
+   "unique": 76300,
+   "validation": 16,
+   "vq_heldout": 4
+  }
+ },
+ "files": {
+  "test/iid/aime-2026.jsonl": "8f5aa5181692fc121ce55d8c4d6169e11c80f94c771a5d6e0c71c7de28ea841a",
+  "test/iid/alfworld.jsonl": "b34e8ec1eac0efacda65d8a22e60550e287cf798642177f0db5d9b85badd823b",
+  "test/iid/healthbench.jsonl": "92df0a2ddfd772027f9f4d51aafd1e07c14c1e190794b5abd629710246773f44",
+  "test/iid/hotpotqa.jsonl": "3c9b8b3366fa469dcf3e2de8311ed3b554d189b8981a2fd9df02054bcec5adb8",
+  "test/iid/mbpp-plus.jsonl": "88da1f18cd01d63e5ac16f80dbed93b2a7f7cd5ae9ddb718b29ff385069ec50f",
+  "test/iid/triviaqa.jsonl": "e088a3a3f2bacb30e35fcecd931c33df18c20909e2aa042682f98f448c01f912",
+  "train/data-condition.json": "07a487cc527d744f64e58f7dbea123e371135eedbf48fdc70a87801153100f0e",
+  "train/training-sources.json": "7cc5d48176bad0940299ce78a8a882ce3c07b46556a79744eb7b764700871d2f",
+  "train/training.jsonl": "23fce747d828e8ec609f5ec6e7b55d84981d008efa64f749aff7167d94a03030",
+  "train/validation-pool.json": "80245b652d49d12c8b1ac7ffecb7dc0a0b239bd08e00b4b4583f7c462ef7a455",
+  "train/vq-heldout.json": "71aefc1427b87aae402fdbb04211521f0e774d22008d23e86f7e74f7762215de"
+ },
+ "steps": 250
+}

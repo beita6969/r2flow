@@ -1,0 +1,19 @@
+resident_trajectories: 32
+actor_requests: 32
+environment_calls: 8
+terminal_evaluations: 8
+process_graders: 4
+transport_threads: 96
+coordinator_participates: true
+max_running_requests: 32
+max_loras_per_batch: 2
+pipeline_mode: within-step
+rollout_scheduling_policy: long-horizon-first-stable@1
+z_feature_cache_entries: 256
+gradient_buffer_bytes: 2147483648
+disable_radix_cache: false
+deterministic_gradients: true
+request_scheduling_policy: horizon-action-aging@1
+gradient_worker_weights: [1, 1]
+gradient_worker_max_sequence_tokens: [0, 0]
+healthbench_judge_capacity: 10
