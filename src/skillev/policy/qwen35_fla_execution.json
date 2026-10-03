@@ -1,0 +1,92 @@
+{
+  "chunk_bwd_kernel_dv_local": [
+    {"key":[32,32,128,128,64,128,128,true,"torch.bfloat16","torch.bfloat16","torch.float32","torch.bfloat16","torch.bfloat16"],"configuration":{"kwargs":{},"num_warps":4,"num_stages":3,"num_ctas":1,"maxnreg":null}}
+  ],
+  "chunk_fwd_kernel_o": [
+    {"key":[32,32,128,128,64,false,"torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.float32","torch.bfloat16"],"configuration":{"kwargs":{"BK":32,"BV":32},"num_warps":2,"num_stages":3,"num_ctas":1,"maxnreg":null}}
+  ],
+  "chunk_gated_delta_rule_bwd_kernel_dhu_blockdim64": [
+    {"key":[32,32,128,128,64,true,false,"torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.float32","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16"],"configuration":{"kwargs":{"BV":32},"num_warps":4,"num_stages":3,"num_ctas":1,"maxnreg":null}}
+  ],
+  "chunk_gated_delta_rule_fwd_kernel_h_blockdim64": [
+    {"key":[32,32,128,128,64,false,"torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.float32","torch.bfloat16"],"configuration":{"kwargs":{"BV":64},"num_warps":4,"num_stages":3,"num_ctas":1,"maxnreg":null}}
+  ],
+  "chunk_gated_delta_rule_fwd_kkt_solve_kernel": [
+    {"key":[32,16,128,16,"torch.bfloat16","torch.float32","torch.float32","torch.bfloat16","torch.int32","torch.int32"],"configuration":{"kwargs":{"BK":64},"num_warps":2,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[32,32,128,16,"torch.bfloat16","torch.float32","torch.bfloat16","torch.bfloat16"],"configuration":{"kwargs":{"BK":64},"num_warps":4,"num_stages":3,"num_ctas":1,"maxnreg":null}}
+  ],
+  "chunk_local_cumsum_scalar_kernel": [
+    {"key":[1,32,64,false,false,"torch.float32","torch.float32"],"configuration":{"kwargs":{},"num_warps":8,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[1,32,64,false,true,"torch.float32","torch.float32"],"configuration":{"kwargs":{},"num_warps":2,"num_stages":3,"num_ctas":1,"maxnreg":null}}
+  ],
+  "l2norm_bwd_kernel": [
+    {"key":[128,1,"torch.bfloat16","torch.float32","torch.bfloat16","torch.bfloat16"],"configuration":{"kwargs":{"BT":16},"num_warps":8,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,10,"torch.bfloat16","torch.float32","torch.bfloat16","torch.bfloat16"],"configuration":{"kwargs":{"BT":128},"num_warps":16,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,11,"torch.bfloat16","torch.float32","torch.bfloat16","torch.bfloat16"],"configuration":{"kwargs":{"BT":64},"num_warps":8,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,12,"torch.bfloat16","torch.float32","torch.bfloat16","torch.bfloat16"],"configuration":{"kwargs":{"BT":8},"num_warps":2,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,13,"torch.bfloat16","torch.float32","torch.bfloat16","torch.bfloat16"],"configuration":{"kwargs":{"BT":128},"num_warps":16,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,14,"torch.bfloat16","torch.float32","torch.bfloat16","torch.bfloat16"],"configuration":{"kwargs":{"BT":8},"num_warps":8,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,2,"torch.bfloat16","torch.float32","torch.bfloat16","torch.bfloat16"],"configuration":{"kwargs":{"BT":32},"num_warps":16,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,3,"torch.bfloat16","torch.float32","torch.bfloat16","torch.bfloat16"],"configuration":{"kwargs":{"BT":8},"num_warps":2,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,4,"torch.bfloat16","torch.float32","torch.bfloat16","torch.bfloat16"],"configuration":{"kwargs":{"BT":8},"num_warps":2,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,5,"torch.bfloat16","torch.float32","torch.bfloat16","torch.bfloat16"],"configuration":{"kwargs":{"BT":128},"num_warps":16,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,6,"torch.bfloat16","torch.float32","torch.bfloat16","torch.bfloat16"],"configuration":{"kwargs":{"BT":64},"num_warps":8,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,7,"torch.bfloat16","torch.float32","torch.bfloat16","torch.bfloat16"],"configuration":{"kwargs":{"BT":64},"num_warps":8,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,8,"torch.bfloat16","torch.float32","torch.bfloat16","torch.bfloat16"],"configuration":{"kwargs":{"BT":64},"num_warps":8,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,9,"torch.bfloat16","torch.float32","torch.bfloat16","torch.bfloat16"],"configuration":{"kwargs":{"BT":32},"num_warps":16,"num_stages":3,"num_ctas":1,"maxnreg":null}}
+  ],
+  "l2norm_fwd_kernel": [
+    {"key":[128,1,"torch.bfloat16","torch.bfloat16","torch.float32"],"configuration":{"kwargs":{"BT":16},"num_warps":4,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,10,"torch.bfloat16","torch.bfloat16","torch.float32"],"configuration":{"kwargs":{"BT":32},"num_warps":16,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,11,"torch.bfloat16","torch.bfloat16","torch.float32"],"configuration":{"kwargs":{"BT":16},"num_warps":8,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,12,"torch.bfloat16","torch.bfloat16","torch.float32"],"configuration":{"kwargs":{"BT":128},"num_warps":16,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,13,"torch.bfloat16","torch.bfloat16","torch.float32"],"configuration":{"kwargs":{"BT":32},"num_warps":16,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,14,"torch.bfloat16","torch.bfloat16","torch.float32"],"configuration":{"kwargs":{"BT":16},"num_warps":8,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,2,"torch.bfloat16","torch.bfloat16","torch.float32"],"configuration":{"kwargs":{"BT":8},"num_warps":2,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,3,"torch.bfloat16","torch.bfloat16","torch.float32"],"configuration":{"kwargs":{"BT":8},"num_warps":1,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,4,"torch.bfloat16","torch.bfloat16","torch.float32"],"configuration":{"kwargs":{"BT":8},"num_warps":1,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,5,"torch.bfloat16","torch.bfloat16","torch.float32"],"configuration":{"kwargs":{"BT":16},"num_warps":8,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,6,"torch.bfloat16","torch.bfloat16","torch.float32"],"configuration":{"kwargs":{"BT":32},"num_warps":16,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,7,"torch.bfloat16","torch.bfloat16","torch.float32"],"configuration":{"kwargs":{"BT":32},"num_warps":16,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,8,"torch.bfloat16","torch.bfloat16","torch.float32"],"configuration":{"kwargs":{"BT":32},"num_warps":16,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,9,"torch.bfloat16","torch.bfloat16","torch.float32"],"configuration":{"kwargs":{"BT":32},"num_warps":16,"num_stages":3,"num_ctas":1,"maxnreg":null}}
+  ],
+  "layer_norm_gated_bwd_kernel": [
+    {"key":[128,1,true,false,true,"torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.float32","torch.float32"],"configuration":{"kwargs":{"BT":32},"num_warps":16,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,10,true,false,true,"torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.float32","torch.float32"],"configuration":{"kwargs":{"BT":32},"num_warps":16,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,11,true,false,true,"torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.float32","torch.float32"],"configuration":{"kwargs":{"BT":64},"num_warps":16,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,12,true,false,true,"torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.float32","torch.float32"],"configuration":{"kwargs":{"BT":64},"num_warps":16,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,13,true,false,true,"torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.float32","torch.float32"],"configuration":{"kwargs":{"BT":64},"num_warps":16,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,14,true,false,true,"torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.float32","torch.float32"],"configuration":{"kwargs":{"BT":32},"num_warps":16,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,2,true,false,true,"torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.float32","torch.float32"],"configuration":{"kwargs":{"BT":64},"num_warps":16,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,3,true,false,true,"torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.float32","torch.float32"],"configuration":{"kwargs":{"BT":32},"num_warps":16,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,4,true,false,true,"torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.float32","torch.float32"],"configuration":{"kwargs":{"BT":32},"num_warps":16,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,5,true,false,true,"torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.float32","torch.float32"],"configuration":{"kwargs":{"BT":64},"num_warps":16,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,6,true,false,true,"torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.float32","torch.float32"],"configuration":{"kwargs":{"BT":32},"num_warps":16,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,7,true,false,true,"torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.float32","torch.float32"],"configuration":{"kwargs":{"BT":64},"num_warps":16,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,8,true,false,true,"torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.float32","torch.float32"],"configuration":{"kwargs":{"BT":64},"num_warps":16,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,9,true,false,true,"torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.float32","torch.float32"],"configuration":{"kwargs":{"BT":32},"num_warps":16,"num_stages":3,"num_ctas":1,"maxnreg":null}}
+  ],
+  "layer_norm_gated_fwd_kernel": [
+    {"key":[128,1,true,false,false,true,"torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.float32"],"configuration":{"kwargs":{"BT":16},"num_warps":16,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,10,true,false,false,true,"torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.float32"],"configuration":{"kwargs":{"BT":32},"num_warps":8,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,11,true,false,false,true,"torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.float32"],"configuration":{"kwargs":{"BT":32},"num_warps":8,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,12,true,false,false,true,"torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.float32"],"configuration":{"kwargs":{"BT":32},"num_warps":8,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,13,true,false,false,true,"torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.float32"],"configuration":{"kwargs":{"BT":32},"num_warps":8,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,14,true,false,false,true,"torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.float32"],"configuration":{"kwargs":{"BT":64},"num_warps":16,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,2,true,false,false,true,"torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.float32"],"configuration":{"kwargs":{"BT":32},"num_warps":8,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,3,true,false,false,true,"torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.float32"],"configuration":{"kwargs":{"BT":32},"num_warps":8,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,4,true,false,false,true,"torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.float32"],"configuration":{"kwargs":{"BT":32},"num_warps":8,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,5,true,false,false,true,"torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.float32"],"configuration":{"kwargs":{"BT":32},"num_warps":8,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,6,true,false,false,true,"torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.float32"],"configuration":{"kwargs":{"BT":32},"num_warps":8,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,7,true,false,false,true,"torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.float32"],"configuration":{"kwargs":{"BT":32},"num_warps":8,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,8,true,false,false,true,"torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.float32"],"configuration":{"kwargs":{"BT":32},"num_warps":8,"num_stages":3,"num_ctas":1,"maxnreg":null}},
+    {"key":[128,9,true,false,false,true,"torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.float32"],"configuration":{"kwargs":{"BT":64},"num_warps":16,"num_stages":3,"num_ctas":1,"maxnreg":null}}
+  ],
+  "prepare_wy_repr_bwd_kernel": [
+    {"key":[32,32,128,128,64,64,64,false,"torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.float32","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.float32"],"configuration":{"kwargs":{},"num_warps":4,"num_stages":3,"num_ctas":1,"maxnreg":null}}
+  ],
+  "recompute_w_u_fwd_kernel": [
+    {"key":[32,32,128,128,64,64,64,false,"torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.bfloat16","torch.float32"],"configuration":{"kwargs":{},"num_warps":4,"num_stages":3,"num_ctas":1,"maxnreg":null}}
+  ]
+}

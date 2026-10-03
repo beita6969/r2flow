@@ -1,0 +1,168 @@
+domains: [hotpotqa, triviaqa, aime-2026, healthbench, alfworld, mbpp-plus]
+healthbench_judge: healthbench-judge-medium-external-per-rubric@4
+healthbench_judge_recovery: healthbench-judge-recovery@3
+format: skillev-bayesian-formal-training@8
+phase_context: true
+reasoning_tool_catalog: true
+token_budget_notice: true
+action_wire: native-event-call@7
+skill_exposure: skill-md-invoke@2
+action_decoding: action-greedy-unseeded@1
+initial_skill_profile: empty-skill-slots@1
+learning_protocol: autonomous-ttb@1
+public_action_semantics: true
+task_semantic_guidance: public-task-semantics@17
+skill_visibility: nonempty-only@1
+reasoning_call_line_domains: [alfworld, hotpotqa, triviaqa]
+model: Qwen3.5-9B
+base_dtype: bfloat16
+lora_rank: 4
+lora_alpha: 8
+seed: 0
+steps: 250
+closure_steps: 1
+maximum_cycles: 1
+checkpoint_every: 10
+max_turns: 50
+static_max_turns: 8
+max_reasoning_tokens: 1024
+reasoning_tokens_by_domain:
+- [aime-2026, 8192]
+- [alfworld, 1024]
+- [healthbench, 4096]
+- [hotpotqa, 2048]
+- [mbpp-plus, 4096]
+- [triviaqa, 2048]
+max_action_tokens: 2048
+action_tokens_by_domain: [[healthbench, 4096], [hotpotqa, 128], [mbpp-plus, 1024], [triviaqa, 128]]
+max_input_tokens: 65536
+input_window: h0-head-tail-recent-tokens@2
+adapter_learning_rate: 0.0001
+z_learning_rate: 0.01
+weight_decay: 0.0
+gradient_clipping: false
+gradient_group_clip: [[backward, 100.0], [forward, 100.0], [z, 400.0]]
+extra_kl: 0.0
+ttb_beta: 4.0
+epsilon: 0.1
+prior_alpha: 1.0
+prior_beta: 1.0
+window: 50
+rho: 0.05
+k: 1.0
+reasoning_native_thinking: true
+thinking_off_domains: [aime-2026, alfworld, healthbench, hotpotqa, mbpp-plus, triviaqa]
+hotpot_deliberation: false
+phi_calls_per_cycle: 64
+performance_profile: configs/r2flow/execution_2gpu.yaml
+planning_hours: 72.0
+target_steps_per_hour: 4.2
+psi_learning_rate: 0.01
+tool_set: r2flow-tool-set@5
+turns_by_domain:
+- [aime-2026, 6]
+- [hotpotqa, 14]
+final_turn_completion: final-turn-submit@1
+skill_call_budget_by_domain: [[alfworld, 2]]
+executor: {backbone_id: qwen35-direct-base, tokenizer_id: Qwen3.5-9B, serving_profile_id: sglang-skillev-event-grammar-patch@1,
+  max_input_tokens: 65536, max_output_tokens: 4096, seed: 0, temperature: 0.0, top_k: 1, top_p: 1.0, enable_thinking: false,
+  prompt_version: skill-md-executor-prompt@1, output_version: executor-output-canonical@1, format: frozen-base-executor@1}
+r2flow:
+  format: r2flow-run@1
+  method:
+    format: skillev-method@4
+    epsilon_min: 0.1
+    temperature_beta: 4.0
+    objective: {format: r2flow-objective@1, residual: 'subtb-all-pairs-geometric@1+huber-grad@1', subtb_lambda: 0.9,
+      weight_normalization: per-trajectory-included-pairs@1, event_scoring: grammar-masked-sum-free-text-conditioned@1, reasoning_scoring: sampled-reasoning-conditioned@1,
+      backward_policy: pb-in-edge-softmax@2,
+      flow_head: psi-mlp-forward-reasoning-prompt-last-hidden+domain-offset@5,
+      gradient_accumulation: per-edge-gradient-bank@1, target_law: execution-trace@1, state_map: sigma-trace-quotient@3}
+  evolution:
+    format: r2flow-evolution-protocol@2
+    boundary_action: evolve@1
+    phi_enabled: true
+    acceptance_gate_enabled: true
+    tost_validation_enabled: true
+    tau_c: 1.0
+    nu: uniform-legal-skill-ids-policy-arguments@1
+    pi_eval: forward-snapshot-at-phase-boundary@1
+    delta: 0.05
+    theta_low: 0.3
+    theta_mid: 0.5
+    theta_high: 0.7
+    n_min: 8
+    theta_h: 0.2
+    kappa_u: 8.0
+    mu_u: skill-verifier-posterior-mean-empirical-bayes-per-phase@1
+    cooldown_phases: 2
+    gamma_carry: 0.5
+    tost_alpha: 0.2
+    tost_margins:
+    - [latency_log_ratio, 0.6931471805599453]
+    - [success_abs, 0.10]
+    - [tempered_reward_abs, 0.10]
+    - [tokens_log_ratio, 0.6931471805599453]
+    mu_rule: eb-skill-mean-beta11@1
+    lcb_glob_rule: skill-pooled-beta11-quantile@1
+    cell_domain_rule: observed-cells-only@1
+    split_context_rule: context-class-projection@1
+    unique_coverage_rule: sole-server-of-a-context-class@1
+    compress_rule: pairwise-redundancy@2
+    generate_rule: context-class-failure-mass@1
+    a_tilde_veto: prune-requires-a-tilde-le-0@1
+    rank_rule: class-order-then-psi0-desc-then-atilde@1
+    carry_rule: scale-sufficient-stats@1
+    unchanged_version_rule: accumulate-undiscounted@1
+    tost_mode: tost-derived-noninferiority@1
+    validation_scope: sequential-per-candidate@1
+    post_edit_retraining: continue-all-parameters@1
+    verification_budget: flow-ranked-budget@1
+    generate_min_support: 8
+    generate_min_failure_rate: 0.5
+    compress_min_context_overlap: 0.8
+    compress_max_reliability_gap: 0.1
+    max_edits_per_phase: 6
+    max_validations_per_phase: 6
+    validation_queries_per_domain: 16
+    validation_rollouts_per_query: 1
+    validation_query_selection: dedicated-validation-pool@1
+    author_model: your-author-model
+    author_base_file: /path/to/author_api_base
+    author_key_file: /path/to/author_api_key
+    max_phase_steps_no_calls: null
+    rsi_amendments:
+    - author-material=solver-evidence@1
+    - author-memory=previous-drafts@2
+    - author-prompt=answer-writer@2
+    - author-prompt=concrete-procedure@1
+    - empty-slot-bootstrap@1
+    - empty-slot-bootstrap@2
+    - gate-improvement-diagnostic=family-posterior@1
+    - generate-adequacy=context-class@1
+    - generate-failure-mass=verifier@1
+    - generate-support=cluster-neff@1
+    - pairwise-redundancy@2
+    - residual-weighted-rollout-share@1
+    - sole-server-of-a-context-class@1
+    - split-support-every-context-nmin@1
+    - tost-cost=paired-log-ratio@1
+    - validation-latency=agent-time@1
+    - validation-rollout=changed-families-only@1
+    - validation-scope=affected-families@2
+    - validation-tokens=policy-generated@1
+    - verification-budget=flow-ranked@1
+    - verifier-evidence-floor@1
+    verifier_evidence_floor: 2
+    verification_budget_per_family: 64
+    reference_verifier_model: your-author-model
+    trigger: {format: vq-plateau-trigger@1, cadence_steps: 10, rollouts_per_query: 4, queries_per_domain: 4,
+      window_points: 2, alpha: 0.05, epsilon_b_fraction: 0.05, gamma_var: 0.25, v_min: 0.001, h0: 0.02,
+      baseline_step: 0, pooling: random-effects-dl-bias-corrected-logvar@1, slope: wls-delta-method-z-per-optimizer-step-fixed-panel@1,
+      entropy: call-weighted-conditional-normalized-verifier-z@1, entropy_undefined: vq-entropy-vacuous-when-undefined@1}
+  verifier_suite: r2flow-verifier-suite@2
+  verification_budget: verify-all@1
+  flow_recording: r2flow-flow-record@1
+  healthbench_reward: healthbench-verdict-memo@1
+  heldout_split: canonical-source-seed0-holdout4plus0-quality-only@1
+  legacy_evolution_enabled: false

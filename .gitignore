@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.venv/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+*.egg-info/
+/runs/
+/logs/
+/models/
+/outputs/
+/data/*
+!/data/r2flow/
+/data/r2flow/test/ood/gpqa_diamond.jsonl
+/data/r2flow/alfworld-games.tsv

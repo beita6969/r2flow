@@ -1,0 +1,522 @@
+{
+ "kind": "gpqa_diamond",
+ "task_type": "healthbench",
+ "source": "Idavidrein/gpqa@83022cefff930aea54f654c0b282e74b9eeda5c6:gpqa_diamond",
+ "csv_sha256": "41d1213cd7a4998605a26c2798500652572007161b3a92817ba46b35befcd305",
+ "selection": "first 128 Record IDs by ascending sha256('test:gpqa_diamond:<Record ID>')",
+ "option_order": "[Correct, Incorrect 1, Incorrect 2, Incorrect 3] sorted by sha256('<option_seed>:<k>') give letters A-D",
+ "items": [
+  {
+   "record_id": "recZdZxsN0AxDx0pB",
+   "option_seed": 3664402420
+  },
+  {
+   "record_id": "recRhwQwHijW0gCLo",
+   "option_seed": 2482229284
+  },
+  {
+   "record_id": "recb4cGsC6BJUCU3V",
+   "option_seed": 3071948144
+  },
+  {
+   "record_id": "recxTy0x7M6T9ikc0",
+   "option_seed": 1712344055
+  },
+  {
+   "record_id": "recoiTJPGUmzAkief",
+   "option_seed": 3032320235
+  },
+  {
+   "record_id": "recnGEpF1srQpaqWq",
+   "option_seed": 248586112
+  },
+  {
+   "record_id": "recnjViFrqlZNL3fY",
+   "option_seed": 215424582
+  },
+  {
+   "record_id": "recIIUynGGpsGEYuo",
+   "option_seed": 2446035310
+  },
+  {
+   "record_id": "rec8nshandHARTkrg",
+   "option_seed": 2928561060
+  },
+  {
+   "record_id": "reca44yABeO2fx7UB",
+   "option_seed": 3140636311
+  },
+  {
+   "record_id": "recNuT2oSnO86bxOx",
+   "option_seed": 744916609
+  },
+  {
+   "record_id": "recl1UtgTVKishAq4",
+   "option_seed": 3025381080
+  },
+  {
+   "record_id": "reccOKzFNmyqeJ6ry",
+   "option_seed": 3695702061
+  },
+  {
+   "record_id": "recO3hvCWRGiG0odN",
+   "option_seed": 2226779460
+  },
+  {
+   "record_id": "rec2ZTsqazBZ3LTWZ",
+   "option_seed": 2763232520
+  },
+  {
+   "record_id": "recypVp2NmPlBKVTp",
+   "option_seed": 2961493885
+  },
+  {
+   "record_id": "recf6ayQmL1SxKbvW",
+   "option_seed": 2510039512
+  },
+  {
+   "record_id": "rec0yTRmO1o1xCA6H",
+   "option_seed": 339877758
+  },
+  {
+   "record_id": "recatj4YXzbOaq3Ar",
+   "option_seed": 2765127262
+  },
+  {
+   "record_id": "recSBcGLPatKb3Ygu",
+   "option_seed": 1397694987
+  },
+  {
+   "record_id": "reccVBrYdwsB84fGy",
+   "option_seed": 3321210918
+  },
+  {
+   "record_id": "recooG6bivTUJpDBz",
+   "option_seed": 2239362285
+  },
+  {
+   "record_id": "recfTlTMjZBuOducT",
+   "option_seed": 3121528218
+  },
+  {
+   "record_id": "recHVUd2DkoKfedJZ",
+   "option_seed": 2364827950
+  },
+  {
+   "record_id": "recQ8oxSY2aCwFRS8",
+   "option_seed": 1007777092
+  },
+  {
+   "record_id": "recqLRu4BcJvlSANc",
+   "option_seed": 3512333483
+  },
+  {
+   "record_id": "rec1oj2DveQWl9Rpw",
+   "option_seed": 721944995
+  },
+  {
+   "record_id": "recXsYa3i2UhGF5fe",
+   "option_seed": 339543025
+  },
+  {
+   "record_id": "recnawZPumSCLMVgp",
+   "option_seed": 742940099
+  },
+  {
+   "record_id": "recG1ljJQcVy6CbSl",
+   "option_seed": 223634098
+  },
+  {
+   "record_id": "rec6sE2CRtD4drtHg",
+   "option_seed": 3208068080
+  },
+  {
+   "record_id": "rec06pnAkLOr2t2mp",
+   "option_seed": 4234931118
+  },
+  {
+   "record_id": "recwW1A85nfyQpReG",
+   "option_seed": 1822246620
+  },
+  {
+   "record_id": "recpJmTOXx6T48nDJ",
+   "option_seed": 3004281240
+  },
+  {
+   "record_id": "rec0VuKUjt1SZ7NYv",
+   "option_seed": 2876104298
+  },
+  {
+   "record_id": "reczkBiPPNrNN49Hp",
+   "option_seed": 291147773
+  },
+  {
+   "record_id": "recw4rROcnHKNZhtK",
+   "option_seed": 2155359278
+  },
+  {
+   "record_id": "recrs0kUo7Ua1xhKO",
+   "option_seed": 1576126570
+  },
+  {
+   "record_id": "recYA3LPsCvF1fTMI",
+   "option_seed": 735524011
+  },
+  {
+   "record_id": "recwlwlcPvXVNPmvl",
+   "option_seed": 4151585561
+  },
+  {
+   "record_id": "reczQ4I0VpENdMtIj",
+   "option_seed": 3732081157
+  },
+  {
+   "record_id": "recPIzpnuYpB4yvmp",
+   "option_seed": 2993409820
+  },
+  {
+   "record_id": "recafnH3RRnMBXEb1",
+   "option_seed": 846753414
+  },
+  {
+   "record_id": "recWzUUYBN0NuXO2k",
+   "option_seed": 2465683470
+  },
+  {
+   "record_id": "recRTiyaRymerDJ4y",
+   "option_seed": 746791036
+  },
+  {
+   "record_id": "recKv4hFyNpViUXnL",
+   "option_seed": 463419191
+  },
+  {
+   "record_id": "recGFKDUd8qgz81Zl",
+   "option_seed": 2875736939
+  },
+  {
+   "record_id": "recK9F5aqdaybl8bb",
+   "option_seed": 618103479
+  },
+  {
+   "record_id": "recUc29lMDBEvurYo",
+   "option_seed": 4283627799
+  },
+  {
+   "record_id": "recLrRirj7iXoB0rU",
+   "option_seed": 2406039175
+  },
+  {
+   "record_id": "rec0wZvZgiz320KRs",
+   "option_seed": 2036875682
+  },
+  {
+   "record_id": "rec4r4KWNLrT7g2kR",
+   "option_seed": 3002766000
+  },
+  {
+   "record_id": "recZSGUkn56v9kEp1",
+   "option_seed": 3501331138
+  },
+  {
+   "record_id": "recqFDvYKKRmbnoUb",
+   "option_seed": 221135089
+  },
+  {
+   "record_id": "rec260hNUCEj109Dj",
+   "option_seed": 1999126597
+  },
+  {
+   "record_id": "recBGxVySx1pkrO1i",
+   "option_seed": 670584012
+  },
+  {
+   "record_id": "recINGR1z01Fh1Z3A",
+   "option_seed": 2195531577
+  },
+  {
+   "record_id": "rec8y3ZrBOcLgNEkE",
+   "option_seed": 4045253207
+  },
+  {
+   "record_id": "recXvQ6gWAmyakrpD",
+   "option_seed": 1392405286
+  },
+  {
+   "record_id": "recuyeuT5rQ6qDt8F",
+   "option_seed": 2328178879
+  },
+  {
+   "record_id": "recs3PLPUEMiqg4P8",
+   "option_seed": 3713262432
+  },
+  {
+   "record_id": "rec4L69T0Y1AS4AFS",
+   "option_seed": 3813795068
+  },
+  {
+   "record_id": "rec9GugrngvsQR99A",
+   "option_seed": 527017816
+  },
+  {
+   "record_id": "recFaL6j8UMhutXrc",
+   "option_seed": 317937194
+  },
+  {
+   "record_id": "recVEXvhYxAhELVqB",
+   "option_seed": 2371359987
+  },
+  {
+   "record_id": "recLAgwx9vbgB5EHk",
+   "option_seed": 3377756011
+  },
+  {
+   "record_id": "reccVFW11Elovnf8T",
+   "option_seed": 2118287326
+  },
+  {
+   "record_id": "reco8WSc71p8zAv4q",
+   "option_seed": 2554597261
+  },
+  {
+   "record_id": "recUBgVlkKzcRPDdK",
+   "option_seed": 2602094213
+  },
+  {
+   "record_id": "recBXlqrZUCR897It",
+   "option_seed": 2963010772
+  },
+  {
+   "record_id": "recD8oX1KevFbl7bL",
+   "option_seed": 3805220642
+  },
+  {
+   "record_id": "rechKl68Uc6H7vU0N",
+   "option_seed": 4291335289
+  },
+  {
+   "record_id": "recBtVK8rBVtIlXDq",
+   "option_seed": 623742818
+  },
+  {
+   "record_id": "recCJJOeBGERaHYax",
+   "option_seed": 3950207113
+  },
+  {
+   "record_id": "recPzW1WqRnPs57D6",
+   "option_seed": 1308170534
+  },
+  {
+   "record_id": "rec0Arme2jcXQZnAW",
+   "option_seed": 3324201266
+  },
+  {
+   "record_id": "recN4DY9Q5V03glmQ",
+   "option_seed": 2201428908
+  },
+  {
+   "record_id": "recWPMm91mGDLXONm",
+   "option_seed": 1457419005
+  },
+  {
+   "record_id": "recDDxpS9s8cwkqfq",
+   "option_seed": 1159529720
+  },
+  {
+   "record_id": "rectlyG9pCAAuWhoB",
+   "option_seed": 3562385714
+  },
+  {
+   "record_id": "recmkvk6EFAmqyMxR",
+   "option_seed": 2810980027
+  },
+  {
+   "record_id": "recRZjaElf8ft7xTq",
+   "option_seed": 3956907846
+  },
+  {
+   "record_id": "recv7GsQg3f0fvB1f",
+   "option_seed": 1603642294
+  },
+  {
+   "record_id": "rec4JrWy7Il8ho5vk",
+   "option_seed": 589341884
+  },
+  {
+   "record_id": "recclFbsjbaiVVnnV",
+   "option_seed": 3120960834
+  },
+  {
+   "record_id": "recQiWOxhkXRz9NVE",
+   "option_seed": 1812374484
+  },
+  {
+   "record_id": "rec7qmSnbud4FHSqL",
+   "option_seed": 3658070797
+  },
+  {
+   "record_id": "rec1zl5LvaatzGhFt",
+   "option_seed": 2693791365
+  },
+  {
+   "record_id": "recyrk6XBVwugG5u8",
+   "option_seed": 4235009047
+  },
+  {
+   "record_id": "recz3MfYHPRhsEQkW",
+   "option_seed": 1069487310
+  },
+  {
+   "record_id": "receYQxnUBvxPcvbQ",
+   "option_seed": 1055816223
+  },
+  {
+   "record_id": "rec9ubQihAh6g9bft",
+   "option_seed": 1632664532
+  },
+  {
+   "record_id": "recYCMJWH7IpcdqwE",
+   "option_seed": 58006848
+  },
+  {
+   "record_id": "rec2fsnzUuvNtUYK8",
+   "option_seed": 3269659213
+  },
+  {
+   "record_id": "recpki12iG9RUGrz9",
+   "option_seed": 3477027343
+  },
+  {
+   "record_id": "recJpyGtGIsxulevT",
+   "option_seed": 531865466
+  },
+  {
+   "record_id": "recVvpD8miVjmmyfe",
+   "option_seed": 2117849294
+  },
+  {
+   "record_id": "recWxGU8Q4YReJ1tb",
+   "option_seed": 2121661583
+  },
+  {
+   "record_id": "recIOlKBsOeEcgkA1",
+   "option_seed": 3694481663
+  },
+  {
+   "record_id": "recxsX66ktJ1Lwt4f",
+   "option_seed": 3287322680
+  },
+  {
+   "record_id": "rec4UqStf9WUVif1f",
+   "option_seed": 4030198770
+  },
+  {
+   "record_id": "recV1nqYQvpII94oC",
+   "option_seed": 924565985
+  },
+  {
+   "record_id": "recOYsaYs6RmtlTDy",
+   "option_seed": 2625916063
+  },
+  {
+   "record_id": "recgM7o1tcc7tP778",
+   "option_seed": 2278505535
+  },
+  {
+   "record_id": "recakFKZioXUuldcd",
+   "option_seed": 2788467801
+  },
+  {
+   "record_id": "rechtUKxC6G67H7Pr",
+   "option_seed": 1722034119
+  },
+  {
+   "record_id": "recDytVnNYZe2HuUU",
+   "option_seed": 3558068669
+  },
+  {
+   "record_id": "rec9W28HgpEUeUN8k",
+   "option_seed": 3163737475
+  },
+  {
+   "record_id": "recIMcQfaQNa6vzsT",
+   "option_seed": 4090052631
+  },
+  {
+   "record_id": "recLSzwBUS3olCjhl",
+   "option_seed": 1175528515
+  },
+  {
+   "record_id": "recb2M22zaD3tL6Qc",
+   "option_seed": 3655553493
+  },
+  {
+   "record_id": "rec7C06XOB2h298ue",
+   "option_seed": 1794528022
+  },
+  {
+   "record_id": "recuYEkVjdVUwA3c0",
+   "option_seed": 4020573713
+  },
+  {
+   "record_id": "reckl6PkaEMWM50yZ",
+   "option_seed": 3241525266
+  },
+  {
+   "record_id": "recmI7EiLv72PxmYK",
+   "option_seed": 640676135
+  },
+  {
+   "record_id": "rec5eA17Qr1ucNLUf",
+   "option_seed": 1263353993
+  },
+  {
+   "record_id": "recvZlMbpPz0yLDle",
+   "option_seed": 3787300488
+  },
+  {
+   "record_id": "reczzzihL7btBH7RO",
+   "option_seed": 2438726589
+  },
+  {
+   "record_id": "reckEnrOPFT9Ru7tW",
+   "option_seed": 732820621
+  },
+  {
+   "record_id": "recNu3MXkvWUzHZr9",
+   "option_seed": 2106254368
+  },
+  {
+   "record_id": "recPL4ZPpVYxgMu57",
+   "option_seed": 658019947
+  },
+  {
+   "record_id": "recywRj5a8EEjj2Ib",
+   "option_seed": 3425599373
+  },
+  {
+   "record_id": "rec527dNeEtWJrYNl",
+   "option_seed": 2402068226
+  },
+  {
+   "record_id": "recLB0EkQ54bYVhnd",
+   "option_seed": 109060699
+  },
+  {
+   "record_id": "reck1zKeCssmN82Ga",
+   "option_seed": 1630701352
+  },
+  {
+   "record_id": "recyl3usDqb7ruXJx",
+   "option_seed": 2944830476
+  },
+  {
+   "record_id": "recjJ54TXc04enRkZ",
+   "option_seed": 2906108012
+  },
+  {
+   "record_id": "recS48OsU6kVadBPW",
+   "option_seed": 1189967155
+  }
+ ]
+}
